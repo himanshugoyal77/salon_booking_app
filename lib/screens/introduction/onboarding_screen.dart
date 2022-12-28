@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:salon_app/components/bottom_navigationbar.dart';
 import 'package:salon_app/provider/user_provider.dart';
 
@@ -64,7 +65,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               scrollDirection: Axis.horizontal,
               child: Row(
                   children: imgUrl
-                      .map((e) => BannerImages(height: height, width: width))
+                      .map((e) => BannerImages(
+                            height: height,
+                            width: width,
+                            image: e,
+                          ))
                       .toList()),
             ),
             SingleChildScrollView(
@@ -183,8 +188,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 }
 
 class BannerImages extends StatelessWidget {
+  final String image;
   const BannerImages({
     Key? key,
+    required this.image,
     required this.height,
     required this.width,
   }) : super(key: key);
@@ -198,7 +205,7 @@ class BannerImages extends StatelessWidget {
       height: 1.8 * (height / 3),
       width: width,
       child: Image.network(
-        "https://thumbs.dreamstime.com/b/hairdresser-protective-mask-cutting-hair-curly-african-american-client-beauty-salon-free-space-195792989.jpg",
+        image,
         fit: BoxFit.cover,
       ),
     );
