@@ -73,7 +73,7 @@ class _MapsPageState extends State<MapsPage> {
   void setPolyLines() async {
     print("object");
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-        'AIzaSyDuUwtQLrvARx9f88_QzCEdbL_7sbqPDZY',
+        'API_KEY',
         PointLatLng(currentLocation.latitude, currentLocation.longitude),
         PointLatLng(
             destinationLocation.latitude, destinationLocation.longitude));
