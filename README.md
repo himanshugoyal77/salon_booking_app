@@ -1,22 +1,18 @@
 
 # Salon Booking App
 
+
+
+https://github.com/himanshugoyal77/salon_booking_app/assets/92782099/e3d2dadc-9938-47cf-b9c6-f81f427a71c7
+
+
+
 Flutter app with clean user interface and morden functionallities like goole maps, reservation system, authentication with firebase
 
 
 ## API Reference
 
-#### Get google maps
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-
+#### Get google maps api
 
 
 ## Authors
